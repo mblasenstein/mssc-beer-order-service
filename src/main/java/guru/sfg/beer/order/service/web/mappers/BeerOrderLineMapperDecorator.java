@@ -26,6 +26,7 @@ public abstract class BeerOrderLineMapperDecorator implements BeerOrderLineMappe
         BeerDto beerDto = beerService.getBeerByUpc(line.getUpc());
         BeerOrderLineDto orderLineDto = mapper.beerOrderLineToDto(line);
         orderLineDto.setBeerName(beerDto.getBeerName());
+        orderLineDto.setBeerStyle(beerDto.getBeerStyle());
         orderLineDto.setUpc(line.getUpc());
         return orderLineDto;
     }
