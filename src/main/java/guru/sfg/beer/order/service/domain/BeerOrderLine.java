@@ -23,6 +23,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 import java.sql.Timestamp;
 import java.util.UUID;
 
@@ -48,6 +49,9 @@ public class BeerOrderLine extends BaseEntity {
 
     @ManyToOne
     private BeerOrder beerOrder;
+
+    @Transient
+    private String upc;
 
     private UUID beerId;
     private Integer orderQuantity = 0;
