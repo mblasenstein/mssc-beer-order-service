@@ -2,9 +2,9 @@ package guru.sfg.beer.order.service.services.beer;
 
 import guru.sfg.beer.order.service.web.model.beer.BeerDto;
 
-import java.util.UUID;
+import java.util.Optional;
 
 public interface BeerService {
 
-    public BeerDto getBeerByUpc(String upc);
+    public Optional<BeerDto> getBeerByUpc(String upc);
 }
